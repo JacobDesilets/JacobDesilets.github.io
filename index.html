@@ -4,43 +4,60 @@
     <title>Jacob Desilets</title>
     <meta name="description" content="Jacob Desilets Home Page">
     <meta name="keywords" content="Jacob Desilets resume personal website">
+    <meta name="theme-color" content="rgb(42, 218, 153)"/>
     <link rel="stylesheet" href="./output.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@300;400;700;800&display=swap" rel="stylesheet">
 </head>
-<body class='flex-col flex h-screen bg-gradient-to-br from-slate-900 to-emerald-300'>
-    <nav>
-      <div class='flex px-5 py-5'>
-        <div class='container flex items-center mx-4'>
-          <a href="./index.html" class="flex items-center pr-20 shrink-0">
-            <!-- <span class="self-center text-xl font-extrabold whitespace-nowrap text-emerald-300 hover:text-emerald-400">JACOB DESILETS</span> -->
-            <img src="./assets/jd.png" class='opacity-100' alt="JACOB DESILETS">
-          </a>
-          <a href="https://github.com/jacobdesilets" class="shrink-0 items-center pr-6 transition ease-in-out hover:translate-y-1 drop-shadow-lg">
-            <img src="./assets/GitHub-Mark-Light-32px.png" alt="GitHub">
-          </a>
-          <a href="https://www.linkedin.com/in/jacob-desilets/" class="shrink-0 items-center pr-6 transition ease-in-out hover:translate-y-1 drop-shadow-lg">
-            <img src="./assets/LI-In-Bug.png" alt="LinkedIn">
-          </a>
-          <div x-data="{ open: false, copied: false }" x-on:mouseleave="open = false; copied = false;" class="flex shrink-0 items-center bg-gradient-to-r from-teal-800 to-transparent bg-opacity-0 hover:bg-opacity-60 rounded-lg transition-all ease-in-out hover:translate-y-1 drop-shadow-lg">
-            <a x-on:mouseover="open = true" href="mailto:jacobdesilets@gmail.com">
-              <img src="./assets/icons8-mail-32.png" alt="LinkedIn">
+<body class='antialiased bg-gradient-to-br from-slate-900 to-emerald-300 min-h-screen min-w-full'>
+    <nav class='flex flex-row items-center justify-between md:justify-start w-full py-5 px-5'>
+            <a href="./" class='flex pr-6'>
+                <!-- <img src="./assets/jd.png" class='opacity-100 w-96 sm:w-auto' alt="JACOB DESILETS"> -->
+                <p class='font-title text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-300 text-2xl'>
+                    Jacob Desilets
+                </p>
             </a>
-            <div x-show='open' x-transition.duration.300ms x-transition.scale.origin.left class='flex text-white font-medium px-3'>
-              <span class='pr-3 w-48' x-text="copied ? 'copied to clipboard :)' : 'jacobdesilets@gmail.com'" x-bind:class="copied ? 'pr-3 w-48 italic text-teal-600 text-opacity-75' : 'pr-3 w-48'"></span>
-              <button x-on:click='copyEmail(); copied = true'>
-                <img class='opacity-40 hover:opacity-80 active:opacity-100 transition-all ease-in-out' src="./assets/icons8-clone-figure-24.png" alt="LinkedIn">
-              </button>
-              
+            <div class="flex flex-row">
+              <a href="https://github.com/jacobdesilets" class="flex pr-6 transition ease-in-out hover:translate-y-1 drop-shadow-lg ms-0">
+                <img src="./assets/GitHub-Mark-Light-32px.png" alt="GitHub">
+              </a>
+              <a href="https://www.linkedin.com/in/jacob-desilets/" class="flex shrink-0 items-center pr-6 transition ease-in-out hover:translate-y-1 drop-shadow-lg ms-0">
+                  <img src="./assets/LI-In-Bug.png" alt="LinkedIn">
+              </a>
+              <div x-data="{ open: false, copied: false }" x-on:mouseleave="open = false; copied = false;" class="flex shrink-0 items-center bg-gradient-to-r from-teal-800 to-transparent bg-opacity-0 hover:bg-opacity-60 rounded-lg transition-all ease-in-out hover:translate-y-1 drop-shadow-lg">
+                <a x-on:mouseover="open = true" href="mailto:jacobdesilets@gmail.com">
+                  <img src="./assets/icons8-mail-32.png" alt="LinkedIn">
+                </a>
+                <div x-show='open' x-transition.duration.300ms x-transition.scale.origin.left class='hidden md:flex text-white font-medium px-2'>
+                  <span class='pr-3 w-48' x-text="copied ? 'copied to clipboard :)' : 'jacobdesilets@gmail.com'" x-bind:class="copied ? 'pr-3 w-48 italic text-teal-600 text-opacity-75' : 'pr-3 w-48'"></span>
+                  <button x-on:click='copyEmail(); copied = true'>
+                    <img class='opacity-40 hover:opacity-80 active:opacity-100 transition-all ease-in-out px-3' src="./assets/icons8-clone-figure-24.png" alt="Email">
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+
     </nav>
 
+    <div class='flex flex-col md:flex-row py-5 px-5'>
+      <div class='flex-col bg-gradient-to-tl from-slate-400 to-teal-900 rounded-md px-3 py-3 md:mr-2 mb-2 drop-shadow-lg'>
+        <p class="font-sans font-bold">Example Text</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class='flex-col bg-gradient-to-tl from-slate-400 to-teal-900 rounded-md px-3 py-3 md:mr-2 mb-2 drop-shadow-lg'>
+        <p class="font-sans font-bold">Example Text</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+
     <script>
-      function copyEmail() {
-        navigator.clipboard.writeText('jacobdesilets@gmail.com');
-      }
+        function copyEmail() {
+          navigator.clipboard.writeText('jacobdesilets@gmail.com');
+        }
     </script>
 </body>
+
 </html>

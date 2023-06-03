@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jacob Desilets</title>
+    <meta name="description" content="Jacob Desilets Home Page">
+    <meta name="keywords" content="Jacob Desilets resume personal website">
+    <link rel="stylesheet" href="./output.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class='flex-col flex h-screen bg-gradient-to-br from-slate-900 to-emerald-300'>
+    <nav>
+      <div class='flex px-5 py-5'>
+        <div class='container flex items-center mx-4'>
+          <a href="./index.html" class="flex items-center pr-20 shrink-0">
+            <img src="./assets/jd.png" class='opacity-100' alt="JACOB DESILETS">
+          </a>
+          <a href="https://github.com/jacobdesilets" class="shrink-0 items-center pr-6 transition ease-in-out hover:translate-y-1 drop-shadow-lg">
+            <img src="./assets/GitHub-Mark-Light-32px.png" alt="GitHub">
+          </a>
+          <a href="https://www.linkedin.com/in/jacob-desilets/" class="shrink-0 items-center pr-6 transition ease-in-out hover:translate-y-1 drop-shadow-lg">
+            <img src="./assets/LI-In-Bug.png" alt="LinkedIn">
+          </a>
+          <div x-data="{ open: false, copied: false }" x-on:mouseleave="open = false; copied = false;" class="flex shrink-0 items-center bg-gradient-to-r from-teal-800 to-transparent bg-opacity-0 hover:bg-opacity-60 rounded-lg transition-all ease-in-out hover:translate-y-1 drop-shadow-lg">
+            <a x-on:mouseover="open = true" href="mailto:jacobdesilets@gmail.com">
+              <img src="./assets/icons8-mail-32.png" alt="LinkedIn">
+            </a>
+            <div x-show='open' x-transition.duration.300ms x-transition.scale.origin.left class='flex text-white font-medium px-3'>
+              <span class='pr-3 w-48' x-text="copied ? 'copied to clipboard :)' : 'jacobdesilets@gmail.com'" x-bind:class="copied ? 'pr-3 w-48 italic text-teal-600 text-opacity-75' : 'pr-3 w-48'"></span>
+              <button x-on:click='copyEmail(); copied = true'>
+                <img class='opacity-40 hover:opacity-80 active:opacity-100 transition-all ease-in-out' src="./assets/icons8-clone-figure-24.png" alt="Email">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class='flex px-5 py-5 bg-slate-500 rounded-md'>
+
+    </div>
+    <script>
+      function copyEmail() {
+        navigator.clipboard.writeText('jacobdesilets@gmail.com');
+      }
+    </script>
+</body>
+</html>
