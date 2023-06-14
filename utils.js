@@ -21,7 +21,7 @@ function imageViewer() {
                 reader.onload = e => callback(e.target.result)
                 this.working = 'done';
             }).catch(errorObject => {
-                console.log(errorObject);
+                console.log(JSON.stringify(errorObject));
             });
 
             
