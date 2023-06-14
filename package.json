@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JacobDesilets/JacobDesilets.github.io/issues"
   },
-  "homepage": "https://github.com/JacobDesilets/JacobDesilets.github.io#readme"
+  "homepage": "https://github.com/JacobDesilets/JacobDesilets.github.io#readme",
+  "dependencies": {
+    "heic2any": "^0.0.4"
+  }
 }
